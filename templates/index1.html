@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>MEDICAL CHATBOT</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+   <link href="../static/img/images (3).jpeg" rel="icon">
+  <link href="../static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../static/style.css" rel="stylesheet">
+  <!-- =======================================================
+  * Template Name: Restaurantly - v3.0.1
+  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+        <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="{{ url_for('static', filename='css/main1.css') }}" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+ <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-cente">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="col-lg-8"><a href="index.html"> <span></span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto" href="{{ url_for('first')}}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('login')}}">Login</a></li>
+		    <li><a class="nav-link scrollto" href="{{ url_for('home')}}">Chatbot</a></li>
+           
+		  <li class="dropdown"><a href="index"><span>prediction</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{{ url_for('index')}}">AD_Prediction</a></li>
+                    
+                </ul>
+              </li>
+			    <li class="dropdown"><a href="#"><span>Analysis</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="{{ url_for('chart')}}">Chart</a></li>
+                
+                </ul>
+              </li>
+		 
+           
+           </ul>
+          
+       
+     </nav>
+     
+    </div>
+  </header><!-- End Header -->
+
+<body>
+    <h1 class="jumbotron text-center">Medical Chatbot</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            <div id="chatbox" class="border border-success">
+                <p class="botText"><span>Hi! I'm Remdex..I will answer your queries..If you want  to exit,type bye... :)</span></p>
+            </div>
+            <div id="userInput">
+                <input id="textInput" class="form-control" type="text" name="msg" placeholder="Type Your Message Here">
+                <input id="buttonInput" class="btn btn-success form-control" type="submit" value="Send">
+            </div>
+        </div>
+    </div>
+
+<script>
+    function getResponse() {
+        let userText = $("#textInput").val();
+        let userHtml = '<p class="userText"><span>' + userText + '</span></p>';
+        $("#textInput").val("");
+        $("#chatbox").append(userHtml);
+        document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+        $.get("/get", { msg: userText }).done(function(data) {
+        var botHtml = '<p class="botText"><span>' + data + '</span></p>';
+        $("#chatbox").append(botHtml);
+        document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+});
+}
+    $("#textInput").keypress(function(e) {
+    //if enter key is pressed
+        if(e.which == 13) {
+            getResponse();
+        }
+    });
+    $("#buttonInput").click(function() {
+        getResponse();
+    });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>
