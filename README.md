@@ -1,15 +1,15 @@
 
-# 🧠 AI Medical Chatbot for Infectious & Disease Prediction
+# AI Medical Chatbot for Infectious & Disease Prediction
 
 An AI-powered medical chatbot that predicts infectious diseases and provides personalized health recommendations using machine learning and natural language processing. This chatbot supports early detection, public health awareness, and efficient decision-making during health crises.
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This project demonstrates how AI and deep learning can enhance user interaction in the medical field. The chatbot utilizes a deep feedforward multilayer perceptron model trained on medical text and image datasets to assess disease symptoms and provide guidance.
 
-### 🎯 Key Features
+### Key Features
 
 - Predicts infectious diseases from symptoms and MRI images
 - Uses NLP to simulate human-like dialogue
@@ -19,7 +19,7 @@ This project demonstrates how AI and deep learning can enhance user interaction 
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 1. **Frontend**: HTML/CSS interface powered by Flask
 2. **Backend**:
@@ -32,7 +32,7 @@ This project demonstrates how AI and deep learning can enhance user interaction 
 
 ---
 
-## 🧠 AI Techniques Used
+## AI Techniques Used
 
 - **Multilayer Perceptron (MLP)** for prediction logic
 - **CNN** for dementia image classification
@@ -42,7 +42,7 @@ This project demonstrates how AI and deep learning can enhance user interaction 
 
 ---
 
-## 🔧 Requirements
+## Requirements
 
 ### Hardware
 - Laptop with Intel processor
@@ -57,7 +57,7 @@ This project demonstrates how AI and deep learning can enhance user interaction 
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 1. **Clone this repository**:
    ```bash
@@ -80,11 +80,10 @@ This project demonstrates how AI and deep learning can enhance user interaction 
 
 ---
 
-## 📊 Sample Output
+## Sample Output
 
 - Text-based queries:
-  - `User:` "I have a fever and sore throat"
-  - `Bot:` "This could be a serious symptom.. Please consult a Doctor ASAP."
+  - 
     ![image](https://github.com/user-attachments/assets/15b7e4ff-355c-405b-bcd5-9585f852da17)
 
 
@@ -96,7 +95,7 @@ This project demonstrates how AI and deep learning can enhance user interaction 
 
 ---
 
-## 📈 Evaluation Metrics
+## Evaluation Metrics
 
 - **Accuracy:** Up to 94.32%
 - **Loss:** Minimum observed loss: 0.1232
@@ -105,7 +104,7 @@ This project demonstrates how AI and deep learning can enhance user interaction 
 
 ---
 
-## 📌 Future Work
+## Future Work
 
 - Integration with Electronic Health Records (EHR)
 - Multilingual voice-based interaction
