@@ -61,7 +61,7 @@ This project demonstrates how AI and deep learning can enhance user interaction 
 
 1. **Clone this repository**:
    ```bash
-   git clone https://github.com/yourusername/ai-medical-chatbot.git
+   git clone https://github.com/haashu0412/Medical_Chatbot.git
    cd ai-medical-chatbot
    ```
 
